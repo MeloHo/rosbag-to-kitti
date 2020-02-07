@@ -244,7 +244,7 @@ int main(int argc, char** argv)
 
 	std::string ROSBAGNAME;
 	nh.getParam("bagName", ROSBAGNAME);
-	std::cout << "ROSBAGNAME: " << ROSBAGNAME << std::endl; 
+	std::cout << "ROSBAGNAME: " << ROSBAGNAME << ".bag" << std::endl; 
 
 	l_img_cnt = 0;
 	r_img_cnt = 0;
@@ -268,9 +268,6 @@ int main(int argc, char** argv)
 	FS::path lidarTimePath_ = FS::path(ROSBAGNAME) / FS::path("lidar_points") / FS::path("timestamps.txt");
 	FS::path gpsDataPath_ = FS::path(ROSBAGNAME) / FS::path("gps") / FS::path("data");
 	FS::path gpsTimePath_ = FS::path(ROSBAGNAME) / FS::path("gps") / FS::path("timestamps.txt");
-
-	std::cout << " leftCameraDataPath_ is: " << leftCameraDataPath_ << std::endl;
-
 
 	leftCameraDataPath = leftCameraDataPath_.string();
 	rightCameraDataPath = rightCameraDataPath_.string();
