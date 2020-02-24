@@ -134,9 +134,18 @@ include_directories(
 )
 
 
-
 add_executable(rosbagtokitti src/rosbagToKITTI.cpp)
 target_link_libraries(rosbagtokitti ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} ${PCL_LIBRARIES})
+
+add_executable(cameralidarcalibration src/CameraLiDARCalibration.cpp)
+target_link_libraries(cameralidarcalibration ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} ${PCL_LIBRARIES})
+
+add_executable(validateCalibration src/validateCalibration.cpp)
+target_link_libraries(validateCalibration ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} ${PCL_LIBRARIES})
+
+add_executable(projectlidartocamera src/projectLiDARtoImage.cpp)
+target_link_libraries(projectlidartocamera ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} ${PCL_LIBRARIES})
+
 
 
 ## Declare a C++ library
