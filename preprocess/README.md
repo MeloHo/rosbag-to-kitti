@@ -1,10 +1,10 @@
-convert ROSbag to our lab's format (KITTI alike)
+convert ROSbag to KITTI alike format. Synchronize the data from sensors.
 
 # Description
 
 This package, named rosbag-to-kitti, converts the raw messages in rosbag into KITTI-alike format. 
 
-  - Frequency: ~10Hz. It depends on the topic with lowest frequency. In our case, it's the image topic.
+  - Frequency: ~10Hz. It depends on the topic with lowest frequency. In this case, it's the image topic.
   
   - ROS Topics included:
   
